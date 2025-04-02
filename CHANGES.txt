@@ -7,10 +7,12 @@
   (reported by Jonathhhan)
 
 * added bindings for:
-  - new classes: ofCubeMap, ofShadow, ofGraphicsCairo
-  - ofTimeMode enum
+  - classes: ofCubeMap, ofShadow, ofGraphicsCairo
+  - structs: ofBoundingBox
+  - enums: ofTimeMode
   - OF_BROWSER_DEFAULT_TARGET const string
   - ofSoundDevice vector
+  - and other functions etc
 * added PI, TWO_PI, M_TWO_PI, HALF_PI, constants to wrapper as swig won't wrap
   glm::pi<float> etc
 
