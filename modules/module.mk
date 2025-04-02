@@ -81,7 +81,8 @@ OF_CFLAGS = -I$(OF_DIR)/libs/openFrameworks \
 			-I$(OF_DIR)/libs/fmodex/include \
 			-I$(OF_DIR)/libs/utf8/include \
 			-I$(OF_DIR)/libs/json/include \
-			-I$(OF_DIR)/libs/pugixml/include
+			-I$(OF_DIR)/libs/pugixml/include \
+			-I$(OF_DIR)/libs/glm/include
 
 LUA_CFLAGS ?= -I$(OF_DIR)/addons/ofxLua/libs/lua
 
@@ -104,7 +105,7 @@ SOLIB_EXT = so
 
 # macOS
 ifeq ($(UNAME), Darwin)
-CXXFLAGS += -std=c++11 -stdlib=libc++
+CXXFLAGS += -std=c++17 -stdlib=libc++
 LDFLAGS += -bundle -undefined dynamic_lookup
 endif
 
