@@ -11,8 +11,8 @@
   - ofTimeMode enum
   - OF_BROWSER_DEFAULT_TARGET const string
   - ofSoundDevice vector
-* added PI, TWO_PI, M_TWO_PI, HALF_PI, constants to wrapper as swig won't wrap g
-lm::pi<float> etc
+* added PI, TWO_PI, M_TWO_PI, HALF_PI, constants to wrapper as swig won't wrap
+  glm::pi<float> etc
 
 * ignore ofMin/ofMap which uses differing input types
 
