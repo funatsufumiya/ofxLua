@@ -215,10 +215,10 @@ function setup()
   print("v1 + v2: "..tostring(v1 + v2))
   print("v1 dot v2: "..glm.dot(v1, v2))
 
-  local v3 = glm.vec4()
-  local m3 = glm.mat3()
-  local m4 = glm.mat4()
-  local q = glm.quat(0, 9, 8, 7)
+  local v3 = glm.vec4(1, 2, 3, 4)
+  local m3 = glm.mat3(1, 2, 3, 4, 5, 6, 7, 8, 9)
+  local m4 = glm.mat4(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
+  local q = glm.quat(5, 6, 7, 8)
   print("v3: "..tostring(v3))
   print("m3:\n"..tostring(m3))
   print("m4:\n"..tostring(m4))
@@ -233,6 +233,62 @@ function setup()
   fboSettings.height = of.getHeight()
   fbo:allocate(fboSettings)
   fbo:clear()
+
+  -- math constants
+  print("pi: "..of.PI)
+  print("two pi: "..of.TWO_PI)
+  print("m two pi: "..of.M_TWO_PI)
+  print("half pi: "..of.HALF_PI)
+
+  -- old math type compatibility
+  local ov2 = of.Vec2f(1, 2)
+  local ov3 = of.Vec3f(3, 4, 5)
+  local ov4 = of.Vec4f(6, 7, 8, 9)
+  local om3 = of.Matrix3x3(1, 2, 3, 4, 5, 6, 7, 8, 9)
+  local om4 = of.Matrix4x4(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16)
+  local oq = of.Quaternion(1, 2, 3, 4)
+  print("ofVec2f: "..tostring(ov2))
+  print("ofVec3f: "..tostring(ov3))
+  print("ofVec4f: "..tostring(ov4))
+  print("ofMatrix3x3:\n"..tostring(om3))
+  print("ofMatrix4x4:\n"..tostring(om4))
+  print("ofQuaternion:\n"..tostring(oq))
+  ov2 = ov2:vec2()
+  ov3 = ov3:vec3()
+  ov4 = ov4:vec4()
+  om3 = om3:mat3()
+  om4 = om4:mat4()
+  oq = oq:quat()
+  print("converted vec2: "..tostring(ov2))
+  print("converted vec3: "..tostring(ov3))
+  print("converted vec4: "..tostring(ov4))
+  print("converted mat3:\n"..tostring(om3))
+  print("converted mat4:\n"..tostring(om4))
+  print("converted quat:\n"..tostring(oq))
+
+  -- ofBoundingBox
+  local bb = of.BoundingBox()
+  print("bb min: "..tostring(bb.min))
+  print("bb max: "..tostring(bb.max))
+  local s = of.SpherePrimitive()
+  bb = s:getBoundingBox()
+  print("sphere bb min: "..tostring(bb.min))
+  print("sphere bb max: "..tostring(bb.max))
+
+  -- ofCubeMap
+  local cm = of.CubeMap()
+  print("cube map: "..tostring(cm))
+
+  -- ofTimeMode
+  print("time mode enum")
+  print("  system: "..tostring(of.TimeMode_System))
+  print("  fixed rate: "..tostring(of.TimeMode_FixedRate))
+  print("  filtered: "..tostring(of.TimeMode_Filtered))
+
+  -- ofTime::Mode
+  print("time enum")
+  print("  system: "..tostring(of.Time_System))
+  print("  fixed rate: "..tostring(of.Time_FixedRate))
 
 end
 
