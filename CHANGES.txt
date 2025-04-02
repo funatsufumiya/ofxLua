@@ -1,7 +1,20 @@
-1.5.3: TBD
+1.6.0: TBD
+
+* updated for OF 0.12.1
+* updated to Lua 5.4.7
 
 * fixed Windows build by ignoring low-level Unix-only ofTime::getAsTimespec()
   (reported by Jonathhhan)
+
+* added bindings for:
+  - new classes: ofCubeMap, ofShadow, ofGraphicsCairo
+  - ofTimeMode enum
+  - OF_BROWSER_DEFAULT_TARGET const string
+  - ofSoundDevice vector
+* added PI, TWO_PI, M_TWO_PI, HALF_PI, constants to wrapper as swig won't wrap g
+lm::pi<float> etc
+
+* ignore ofMin/ofMap which uses differing input types
 
 1.5.2: 2023 Nov 12
 
