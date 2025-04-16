@@ -15,6 +15,8 @@
   - and other functions etc
 * added PI, TWO_PI, M_TWO_PI, HALF_PI, constants to wrapper as swig won't wrap
   glm::pi<float> etc
+* added std::map templates handling ofArduino pins
+* added std::map template for ofHttpRequest headers
 
 * ignore ofMin/ofMap which uses differing input types
 
