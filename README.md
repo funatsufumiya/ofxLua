@@ -319,11 +319,11 @@ Mixing up : and . is probably the most common pitfall when coming from C++ to Lu
 
 To see the detailed differences with the OF C++ API run the following:
 
-    grep DIFF swig/openFrameworks.i
+    find swig -type f -name "*.i" -exec grep DIFF {} \;
    
 To see work to be done on the bindings run:
 
-    grep TODO swig/openFrameworks.i
+    find swig -type f -name "*.i" -exec grep TODO {} \;
 
 ### Classes
 
